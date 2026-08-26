@@ -8,7 +8,7 @@ Python and key library versions are as follows:
 
 . Python version: 3.11.12 (main, Apr  8 2025, 14:15:29)
 . pandas 2.2.3
-.  imnumpy 2.2.6
+. numpy 2.2.6
 . scipy 1.15.3
 . statsmodels 0.14.4
 . sklearn 1.9.0
