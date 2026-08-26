@@ -1,4 +1,4 @@
-# Biological_Cultural_Evolutionary_Rescue
+# Biological and Cultural and Evolutionary Rescue models
 
 This repository provides the source code for "Comparison of evolutionary rescue via biological and cultural evolution." 
 
@@ -25,4 +25,8 @@ Bio_Evo_Rescue.py: This scripts simualtes the eco-evolutionary dynamics under bi
 Cul_Evo_Rescue_individual.py: This script simulates eco-evolutionary dynamics in which individual learning alone can affect individuals' traits.  The results are saved as "Cultural_evolutionary_rescue_individual.csv."
 
 Cul_Evo_Rescue_parallel.py: This script runs cultural evolution and population dynamics models in parallel under content-, conformity-, and anticonformity-biased social learning. The results are saved as "Cultural_evolutionary_rescue_content.csv", "Cultural_evolutionary_rescue_conformity.csv", and "Cultural_evolutionary_rescu_anticonformity.csv"
+
+2. Statistical analyses and visualisation
+   Analysis.ipynb provides codes that replicate figures and tables in the associated manuscript.
+   
 
