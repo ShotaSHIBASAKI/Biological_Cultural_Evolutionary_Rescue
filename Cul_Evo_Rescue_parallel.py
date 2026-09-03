@@ -171,7 +171,9 @@ def Cultural_Social_ParameterSweep_parallel(learning_bias=0,d=0.1,b_M=0.075,iter
     elif learning_bias == 1:
         parm_list = [0.1, 0.5, 1, 1.5, 2]
     elif learning_bias == 2:
-        parm_list = [1.1, 1.5, 2, 2.5, 3]
+        #parm_list = [0.1, 0.5, 1.1, 1.5, 2, 2.5, 3]
+        parm_list = [0.1, 0.5] # additional analysis
+
 
     param_product = product(b_A_list, mu_list, c_list, s_list, parm_list, init_pop_size_list)
     df_params = pd.DataFrame(
@@ -211,8 +213,9 @@ def bias_name(learning_bias):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--bias", type=int, required=True, help="0: content, 1: conformity, 2: anticonformity")
-    parser.add_argument("--n_jobs", type=int, default=3)
+    #parser.add_argument("--bias", type=int, required=True, help="0: content, 1: conformity, 2: anticonformity")
+    parser.add_argument("--bias", type=int, required=True, help="2: anticonformity") # additional analysis
+    parser.add_argument("--n_jobs", type=int, default=8)
     args = parser.parse_args()
 
     df = Cultural_Social_ParameterSweep_parallel(
@@ -222,6 +225,7 @@ if __name__ == "__main__":
         n_jobs=args.n_jobs
     )
 
-    fname = f"Cultural_evolutionary_rescue_{bias_name(args.bias)}.csv"
+   #fname = f"Cultural_evolutionary_rescue_{bias_name(args.bias)}.csv"
+    fname = f"Cultural_evolutionary_rescue2_{bias_name(args.bias)}.csv"
     df.to_csv(fname, index=False)
     print(f"Saved to {fname}")
